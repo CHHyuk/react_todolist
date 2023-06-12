@@ -1,13 +1,36 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 웹 폰트 불러오기 */
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html > body,
+html > body input,
+html > body select,
+html > body textarea,
+html > body pre,
+html > body button {
+  font-family: "GmarketSansMedium";
+  text-underline-position: under;
+  line-height: 1.3;
+}
+
+/* 커스텀 */
+html,
+body,
+#root {
+  height: 100%;
+  /* background-color: #7075ff52; */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }
